@@ -97,4 +97,3 @@ To add new dropout methods:
 3. Adjust `config.ini` to use the new method by changing the `[Dropout]` section.
 
 Thank you for using this guide to set up and run the dynamic dropout integrated LeNet model on MNIST!
-```
