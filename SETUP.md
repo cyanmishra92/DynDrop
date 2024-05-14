@@ -98,9 +98,3 @@ To add new dropout methods:
 
 Thank you for using this guide to set up and run the dynamic dropout integrated LeNet model on MNIST!
 ```
-
-### Notes:
-
-- This README is structured to be very beginner-friendly, walking through each step needed to get from a fresh environment to a running model.
-- It provides links to necessary resources and specific instructions on how to set up the environment using Conda, which is particularly useful for managing project-specific dependencies.
-- The guide also touches on how to configure the model using a `config.ini` file, which adds flexibility and ease of use to switch between different dropout techniques and training parameters.
