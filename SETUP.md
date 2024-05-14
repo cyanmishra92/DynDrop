@@ -16,13 +16,13 @@ Before you begin, ensure you have the following installed:
    Open your terminal and create a new conda environment by running:
 
    ```bash
-   conda create -n lenet_dropout python=3.8
+   conda create -n dyn_dropout python=3.8
    ```
 
    Activate the environment:
 
    ```bash
-   conda activate lenet_dropout
+   conda activate dyn_dropout
    ```
 
 2. **Install PyTorch and torchvision**:
