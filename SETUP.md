@@ -1,6 +1,6 @@
 ### README.md for Setup and Execution
 
-```markdown
+
 # Setup and Execution Guide for LeNet5 with Dynamic Dropout on MNIST
 
 This guide provides detailed instructions on how to set up your environment and run the LeNet5 model with various dynamic dropout methods on the MNIST dataset.
