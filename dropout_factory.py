@@ -1,3 +1,4 @@
+# dropout_factory.py
 from fmre_dynamic_dropout import FMREDynamicDropout
 from l2_dynamic_dropout import L2DynamicDropout
 from optimal_brain_damage_dropout import OptimalBrainDamageDropout
@@ -6,30 +7,18 @@ from learning_sparse_masks_dropout import LearningSparseMasksDropout
 from neuron_shapley_dropout import NeuronShapleyDropout
 from taylor_expansion_dropout import TaylorExpansionDropout
 
-def get_dropout_method(method_name, **kwargs):
+def get_dropout_method(method_name):
     """
-    Factory function to retrieve dropout classes based on the method name.
-    Additional parameters for the dropout classes can be passed using kwargs.
-
-    :param method_name: Name of the dropout method as a string.
-    :param kwargs: Additional keyword arguments for initializing the dropout class.
-    :return: An instance of the dropout class.
+    Maps method name strings to dropout class types.
     """
-    if method_name == 'gradient_dynamic_dropout':
-        return GradientDynamicDropout(**kwargs)
-    elif method_name == 'l2_dynamic_dropout':
-        return L2DynamicDropout(**kwargs)
-    elif method_name == 'optimal_brain_damage_dropout':
-        return OptimalBrainDamageDropout(**kwargs)
-    elif method_name == 'fmre_dynamic_dropout':
-        return FMREDynamicDropout(**kwargs)
-    elif method_name == 'learning_sparse_masks_dropout':
-        return LearningSparseMasksDropout(**kwargs)
-    elif method_name == 'neuron_shapley_dropout':
-        return NeuronShapleyDropout(**kwargs)
-    elif method_name == 'taylor_expansion_dropout':
-        return TaylorExpansionDropout(**kwargs)
-    else:
-        raise ValueError(f"Unknown dropout method: {method_name}")
-
+    methods = {
+        'gradient_dynamic_dropout': GradientDynamicDropout,
+        'l2_dynamic_dropout': L2DynamicDropout,
+        'optimal_brain_damage_dropout': OptimalBrainDamageDropout,
+        'fmre_dynamic_dropout': FMREDynamicDropout,
+        'learning_sparse_masks_dropout': LearningSparseMasksDropout,
+        'neuron_shapley_dropout': NeuronShapleyDropout,
+        'taylor_expansion_dropout': TaylorExpansionDropout
+    }
+    return methods[method_name]  # Return the class, not an instance
 

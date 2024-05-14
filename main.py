@@ -36,6 +36,8 @@ def train(model, device, train_loader, optimizer, epoch):
         data, target = data.to(device), target.to(device)
         optimizer.zero_grad()
         output = model(data)
+        print("Output shape:", output.shape)  # Debug print
+        print("Target shape:", target.shape)  # Debug print
         loss = torch.nn.functional.cross_entropy(output, target)
         loss.backward()
         optimizer.step()
